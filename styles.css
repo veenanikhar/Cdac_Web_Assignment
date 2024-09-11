@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(90deg, #59a0e7, #013a72, #66b2ff, #051e70); Professional gradient colors */
+    background: linear-gradient(90deg, #feb47b, #22c1c3, #fdcb6e, #75a5ed);
+    background-size: 600% 600%; /* Ensures the gradient covers the entire area */
+    animation: gradientAnimation 10s ease infinite; /* Apply the gradient animation */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Shadow for container */
+    border-radius: 20px; /* Optional: Adjust border-radius for a rounded container */
+    padding: 30px;
+}
+
+.login-box {
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for login box */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Light border for visibility */
+}
+
+h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="password"] {
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(1, 0, 0, 0.2); /* Shadow for input fields */
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #00509e; /* Modern browsers support this to style the checkbox color */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #002d5a, #00509e, #002d5a); /* Professional gradient colors */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+}
+
+button:hover {
+    background: linear-gradient(90deg, #76b2ee, #003366, #76b2ee); /* Reverse gradient on hover */
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.spinner {
+    display: none;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #00509e;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.message {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.checkboxes {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+}
+
+.checkboxes label {
+    font-size: 14px;
+    color: #000000;
+}
+
+@media (max-width: 600px) {
+    .login-box {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
