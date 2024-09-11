@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
@@ -20,22 +21,21 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Enter your password">
                     <small id="passwordError" class="error"></small>
-                    <div class="checkboxes">
-                        <input type="checkbox" id="showPassword">
-                        <label for="showPassword">Show Password</label>
-                    </div>
-                    <div class="checkboxes">
-                        <input type="checkbox" id="rememberMe" name="rememberMe">
-                        <label for="rememberMe">Remember Me</label>
-                    </div>
                 </div>
-                
+                <div class="checkboxes">
+                    <input type="checkbox" id="showPassword">
+                    <label for="showPassword">Show Password</label>
+                </div>
+                <div class="checkboxes">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
                 <button type="submit" id="submitBtn">Login</button>
                 <div id="loadingSpinner" class="spinner"></div>
                 <div id="message" class="message"></div>
             </form>
         </div>
     </div>
-    <script src= "script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

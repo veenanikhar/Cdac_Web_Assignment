@@ -1,9 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    /* background: linear-gradient(90deg, #59a0e7, #013a72, #66b2ff, #051e70); Professional gradient colors */
     background: linear-gradient(90deg, #feb47b, #22c1c3, #fdcb6e, #75a5ed);
-    background-size: 600% 600%; /* Ensures the gradient covers the entire area */
-    animation: gradientAnimation 10s ease infinite; /* Apply the gradient animation */
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -14,73 +13,75 @@ body {
 .container {
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0); /* Shadow for container */
-    border-radius: 20px; /* Optional: Adjust border-radius for a rounded container */
-    padding: 30px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .login-box {
     background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for login box */
-    padding: 30px;
-    box-sizing: border-box;
-    text-align: left;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Light border for visibility */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #000000;
+    color: #333;
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: 600;
-    text-align: center;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    color: #000000;
+    margin-bottom: 5px;
+    color: #333;
     font-size: 14px;
+    text-align: left;
 }
 
 input[type="text"], input[type="password"] {
-    background: rgba(255, 255, 255, 0.1);
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ffffff;
-    border-radius: 40px;
-    box-shadow: 0 2px 4px rgba(1, 0, 0, 0.2); /* Shadow for input fields */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
     box-sizing: border-box;
     font-size: 14px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(0, 80, 158, 0.5);
+    outline: none;
 }
 
 input[type="checkbox"] {
     margin-right: 5px;
-    accent-color: #00509e; /* Modern browsers support this to style the checkbox color */
+    accent-color: #00509e;
 }
 
 button {
     width: 100%;
     padding: 12px;
     border: none;
-    border-radius: 40px;
-    background: linear-gradient(90deg, #002d5a, #00509e, #002d5a); /* Professional gradient colors */
+    border-radius: 20px;
+    background: linear-gradient(90deg, #002d5a, #00509e, #002d5a);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background: linear-gradient(90deg, #76b2ee, #003366, #76b2ee); /* Reverse gradient on hover */
+    background: linear-gradient(90deg, #76b2ee, #003366, #76b2ee);
 }
 
 .error {
@@ -88,6 +89,7 @@ button:hover {
     font-size: 12px;
     margin-top: 5px;
     display: block;
+    text-align: left;
 }
 
 .spinner {
@@ -115,19 +117,34 @@ button:hover {
 .checkboxes {
     margin-top: 10px;
     display: flex;
-    justify-content: left;
-    align-items: baseline;
+    align-items: center;
 }
 
 .checkboxes label {
     font-size: 14px;
-    color: #000000;
+    color: #333;
 }
 
 @media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
     .login-box {
-        width: 90%;
-        padding: 20px;
+        padding: 20px 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 10px;
+    }
+
+    input[type="text"], input[type="password"] {
+        padding: 8px;
     }
 }
 
